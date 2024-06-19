@@ -53,6 +53,7 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
     }
+
     private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container_view, fragment)
