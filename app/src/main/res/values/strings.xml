@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">JKT48 Showroom</string>
+    <string name="home_bottom_nav_menu">Home</string>
+    <string name="member_bottom_nav_menu">Member</string>
+    <string name="profile_bottom_nav_menu">Profile</string>
+    <string name="showroom_live">Showroom Live</string>
+    <string name="jkt48_showroom">JKT48 Showroom</string>
+    <string name="login">Login</string>
+    <string name="live_jkt48_member">Live JKT48 Member</string>
+    <string name="recent_live">Recent Live</string>
+    <string name="live_date">Senin, 1 Januari 1900</string>
+    <string name="views_count">1.600.000 views</string>
+    <string name="live_time">16:00</string>
+    <string name="gifts">100.000 Gold</string>
+    <string name="member_name">Member Name</string>
+    <string name="member_name_item">Gracia JKT48</string>
+    <string name="recent_live_item">20 hours ago</string>
+    <string name="recent_live_text">20 hours ago</string>
+    <string name="jkt48_member">JKT48 Member</string>
+    <string name="live_comments">Live Comments</string>
+    <string name="comments_sample">Halo</string>
+    <string name="img_member_detail">img_member_detail</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="followers">500.000</string>
+    <string name="title_followers">Followers:</string>
+    <string name="title_room_level">Room Level:</string>
+    <string name="room_level">500</string>
+    <string name="room_category">Global</string>
+    <string name="title_room_category">Category:</string>
+    <string name="member_bio">Biodata</string>
+    <string name="room_info">Room Info</string>
+    <string name="backbutton">backButton</string>
+</resources>

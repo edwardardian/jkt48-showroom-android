@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" >
+
+        <ImageView
+            android:id="@+id/img_live_member_recent"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:contentDescription="@string/live_jkt48_member"
+            android:cropToPadding="true"
+            android:src="@drawable/baseline_image_24" />
+
+        <TextView
+            android:id="@+id/tv_recent_live_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_live_member_recent"
+            android:text="@string/live_date"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_margin="2dp"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/calendar" />
+
+        <TextView
+            android:id="@+id/tv_recent_live_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_recent_live_date"
+            android:layout_toEndOf="@id/img_live_member_recent"
+            android:text="@string/views_count"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_margin="2dp"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/show" />
+
+        <TextView
+            android:id="@+id/tv_recent_live_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_recent_live_views"
+            android:layout_toEndOf="@id/img_live_member_recent"
+            android:text="@string/live_time"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_margin="2dp"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/clock" />
+
+        <TextView
+            android:id="@+id/tv_recent_live_gifts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_recent_live_time"
+            android:layout_toEndOf="@id/img_live_member_recent"
+            android:text="@string/gifts"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_margin="2dp"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/gifts" />
+
+        <Button
+            android:id="@+id/btn_member_detail"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/img_live_member_recent"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/custom_button_background"
+            android:contentDescription="@string/member_name"
+            android:text="@string/member_name_item"
+            android:layout_margin="4dp"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btn_recent_live"
+            android:layout_width="135dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/img_live_member_recent"
+            android:background="@drawable/custom_button_background"
+            android:contentDescription="@string/recent_live_item"
+            android:text="@string/recent_live_text"
+            android:layout_margin="4dp"
+            android:textSize="14sp"/>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" >
+
+        <ImageView
+            android:id="@+id/img_member_list"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:contentDescription="@string/live_jkt48_member"
+            android:src="@drawable/baseline_image_24" />
+
+        <TextView
+            android:id="@+id/tv_member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_member_list"
+            android:layout_marginTop="4dp"
+            android:text="@string/member_name_item"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textAlignment="textStart" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
