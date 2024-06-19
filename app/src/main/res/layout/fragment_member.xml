@@ -7,7 +7,7 @@
         android:id="@+id/mainView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp" >
+        android:layout_margin="4dp">
 
         <TextView
             android:id="@+id/tv_member"
@@ -16,14 +16,14 @@
             android:layout_marginStart="8dp"
             android:text="@string/jkt48_member"
             android:textStyle="bold"
-            android:textSize="24sp" />
+            android:textSize="24sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_member"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
-            android:layout_below="@id/tv_member" />
+            android:layout_below="@id/tv_member"/>
 
     </RelativeLayout>
 </ScrollView>
