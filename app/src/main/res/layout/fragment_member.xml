@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -21,14 +21,14 @@
         <com.facebook.shimmer.ShimmerFrameLayout
             android:id="@+id/shimmer_frame"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@id/tv_member"
             android:autoStart="true"
             android:duration="1000">
 
             <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:columnCount="2"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
@@ -81,4 +81,4 @@
             android:visibility="gone"/>
 
     </RelativeLayout>
-</ScrollView>
+</RelativeLayout>
