@@ -27,11 +27,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_room_name"
+            android:layout_margin="2dp"
+            android:drawablePadding="4dp"
             android:text="@string/title_followers"
             android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_margin="2dp"
-            android:drawablePadding="4dp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_room_followers"

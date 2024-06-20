@@ -73,4 +73,7 @@ dependencies {
 
     // Parcelable
     implementation(libs.kotlin.parcelize.runtime)
+
+    // Shimmer Effect
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 }

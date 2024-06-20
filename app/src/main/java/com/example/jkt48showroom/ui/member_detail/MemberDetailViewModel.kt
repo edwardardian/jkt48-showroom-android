@@ -22,7 +22,7 @@ class MemberDetailViewModel : ViewModel() {
                     val allTrainee = ApiConfig.apiService.getAllTrainee().execute().body() ?: emptyList()
                     allMember + allTrainee
                 }
-                val member = members?.find { it.main_name == mainName }
+                val member = members?.find { it.name == mainName }
                 _filteredMember.postValue(member)
             } catch (e: Exception) {
                 e.printStackTrace()

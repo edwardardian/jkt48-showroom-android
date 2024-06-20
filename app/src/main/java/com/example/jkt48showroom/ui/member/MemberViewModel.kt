@@ -1,5 +1,7 @@
 package com.example.jkt48showroom.ui.member
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,15 +19,7 @@ class MemberViewModel : ViewModel() {
     private val _membersName = MutableLiveData<List<String>>()
     val membersName: LiveData<List<String>> = _membersName
 
-    private fun getImagesAndNames(memberData: List<Member>) {
-        val imagesUrl = memberData.map { it.image }
-        val namesUrl = memberData.map { it.main_name }
-
-        _membersImage.postValue(imagesUrl)
-        _membersName.postValue(namesUrl)
-    }
-
-    private fun fetchMemberData() {
+    fun fetchMemberData() {
         viewModelScope.launch {
             try {
                 val memberData: List<Member>? = withContext(Dispatchers.IO) {
@@ -34,15 +28,14 @@ class MemberViewModel : ViewModel() {
                     allMember + allTrainee
                 }
                 memberData?.let {
-                    getImagesAndNames(it)
+                    val imagesUrl = it.map { member -> member.image }
+                    val namesUrl = it.map { member -> member.name }
+                    _membersImage.postValue(imagesUrl)
+                    _membersName.postValue(namesUrl)
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
         }
-    }
-
-    init {
-        fetchMemberData()
     }
 }

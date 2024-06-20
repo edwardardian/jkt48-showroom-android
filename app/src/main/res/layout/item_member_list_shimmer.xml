@@ -16,17 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:contentDescription="@string/live_jkt48_member"
-            android:src="@drawable/baseline_image_24" />
+            android:background="@color/darker_gray" />
 
         <TextView
             android:id="@+id/tv_member_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/img_member_list"
             android:layout_marginTop="4dp"
-            android:text="@string/member_name_item"
-            android:textStyle="bold"
-            android:textSize="11sp"
+            android:background="@color/darker_gray"
             android:textAlignment="textStart" />
 
     </RelativeLayout>

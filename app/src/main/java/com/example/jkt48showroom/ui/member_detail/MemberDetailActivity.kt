@@ -3,6 +3,7 @@ package com.example.jkt48showroom.ui.member_detail
 import android.content.Intent
 import android.media.Image
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -20,6 +21,7 @@ import com.example.jkt48showroom.R
 import com.example.jkt48showroom.data.model.Member
 import com.example.jkt48showroom.ui.adapters.MemberDetailAdapter
 import com.example.jkt48showroom.ui.member.MemberFragment
+import com.facebook.shimmer.ShimmerFrameLayout
 
 class MemberDetailActivity : AppCompatActivity() {
     private lateinit var memberDetailAdapter: MemberDetailAdapter
@@ -27,6 +29,9 @@ class MemberDetailActivity : AppCompatActivity() {
     private lateinit var imgMemberDetail: ImageView
     private lateinit var tvTitleMemberDetail: TextView
     private lateinit var btnBack: ImageView
+    private lateinit var rvMemberDetail: RecyclerView
+    private lateinit var shimmerFrameLayoutTop: ShimmerFrameLayout
+    private lateinit var shimmerFrameLayoutBottom: ShimmerFrameLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,11 +44,13 @@ class MemberDetailActivity : AppCompatActivity() {
             insets
         }
 
-        val rvMemberDetail: RecyclerView = findViewById(R.id.rv_member_detail)
+        rvMemberDetail = findViewById(R.id.rv_member_detail)
         rvMemberDetail.layoutManager = GridLayoutManager(this, 1)
 
         imgMemberDetail = findViewById(R.id.img_member_detail)
         tvTitleMemberDetail = findViewById(R.id.tv_title_member_detail)
+        shimmerFrameLayoutTop = findViewById(R.id.shimmer_frame_top)
+        shimmerFrameLayoutBottom = findViewById(R.id.shimmer_frame_bottom)
         btnBack = findViewById(R.id.btn_back_detail)
         btnBack.setOnClickListener {
             finish()
@@ -61,6 +68,11 @@ class MemberDetailActivity : AppCompatActivity() {
             if (member != null) {
                 memberDetailAdapter.updateData(member)
                 updateMemberDetailViews(member)
+
+                shimmerFrameLayoutTop.stopShimmer()
+                shimmerFrameLayoutTop.visibility = View.GONE
+                shimmerFrameLayoutBottom.stopShimmer()
+                shimmerFrameLayoutBottom.visibility = View.GONE
             }
         })
 
@@ -75,6 +87,6 @@ class MemberDetailActivity : AppCompatActivity() {
             .error(R.drawable.baseline_image_24)
             .into(imgMemberDetail)
 
-        tvTitleMemberDetail.text = member.main_name
+        tvTitleMemberDetail.text = member.name
     }
 }
