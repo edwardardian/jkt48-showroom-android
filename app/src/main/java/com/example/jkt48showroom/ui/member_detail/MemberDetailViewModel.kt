@@ -17,13 +17,13 @@ class MemberDetailViewModel : ViewModel() {
     fun fetchMemberData(mainName: String) {
         viewModelScope.launch {
             try {
-                val members: List<Member>? = withContext(Dispatchers.IO) {
-                    val allMember = ApiConfig.apiService.getAllMember().execute().body() ?: emptyList()
-                    val allTrainee = ApiConfig.apiService.getAllTrainee().execute().body() ?: emptyList()
-                    allMember + allTrainee
+                val response = withContext(Dispatchers.IO) {
+                    ApiConfig.apiService.getMember(mainName).execute()
                 }
-                val member = members?.find { it.name == mainName }
-                _filteredMember.postValue(member)
+                if (response.isSuccessful) {
+                    val member = response.body()
+                    _filteredMember.postValue(member)
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
             }

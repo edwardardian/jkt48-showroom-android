@@ -33,11 +33,13 @@
 
     <ImageView
         android:id="@+id/img_member_detail_shimmer"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="170dp"
         android:layout_below="@id/toolbar_member_detail_shimmer"
-        android:contentDescription="@string/img_member_detail"
-        android:background="@color/darker_gray"/>
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="55dp"
+        android:background="@color/darker_gray"
+        android:contentDescription="@string/img_member_detail" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_member_detail_shimmer"

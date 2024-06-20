@@ -40,8 +40,9 @@ class MemberFragment : Fragment() {
         rvMemberList.layoutManager = GridLayoutManager(context, 2)
 
         memberAdapter = MemberAdapter(mutableListOf(), mutableListOf()) { mainName ->
+            val customName = mainName.substringBefore("/")
             val intent = Intent(activity, MemberDetailActivity::class.java)
-            intent.putExtra("MEMBER_NAME", mainName)
+            intent.putExtra("MEMBER_NAME", customName)
             startActivity(intent)
         }
         rvMemberList.adapter = memberAdapter

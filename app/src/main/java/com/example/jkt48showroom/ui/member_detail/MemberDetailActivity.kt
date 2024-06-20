@@ -22,6 +22,7 @@ import com.example.jkt48showroom.data.model.Member
 import com.example.jkt48showroom.ui.adapters.MemberDetailAdapter
 import com.example.jkt48showroom.ui.member.MemberFragment
 import com.facebook.shimmer.ShimmerFrameLayout
+import java.util.Locale
 
 class MemberDetailActivity : AppCompatActivity() {
     private lateinit var memberDetailAdapter: MemberDetailAdapter
@@ -61,7 +62,7 @@ class MemberDetailActivity : AppCompatActivity() {
         rvMemberDetail.adapter = memberDetailAdapter
 
         // Get data from intent
-        val memberName = intent.getStringExtra("MEMBER_NAME")
+        val memberName = intent.getStringExtra("MEMBER_NAME")?.substringBefore(" ")
 
         // Observe LiveData from ViewModel and update adapter
         memberDetailViewModel.filteredMember.observe(this, Observer { member ->
@@ -77,7 +78,7 @@ class MemberDetailActivity : AppCompatActivity() {
         })
 
         // Fetch member data
-        memberDetailViewModel.fetchMemberData(memberName.toString())
+        memberDetailViewModel.fetchMemberData(memberName.toString().lowercase(Locale.ROOT))
     }
 
     private fun updateMemberDetailViews(member: Member) {

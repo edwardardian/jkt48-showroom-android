@@ -8,7 +8,7 @@ import kotlinx.parcelize.Parcelize
 data class Member(
     @SerializedName("isTrainee") val isTrainee: Boolean,
     val roomId: Int,
-    @SerializedName("main_name") val name: String,
+    @SerializedName("main_name") var name: String,
     val description: String,
     val recommend_comment_url: String,
     val room_level: Int,
@@ -20,5 +20,5 @@ data class Member(
     val liveGifts: Int,
     @SerializedName("image") val image: String,
     val image_square: String,
-    val follower: Int,
+    @SerializedName("follower_num") val follower: Int,
 ) : Parcelable
