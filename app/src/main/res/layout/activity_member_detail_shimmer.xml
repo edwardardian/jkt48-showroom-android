@@ -33,11 +33,11 @@
 
     <ImageView
         android:id="@+id/img_member_detail_shimmer"
-        android:layout_width="300dp"
+        android:layout_width="330dp"
         android:layout_height="170dp"
         android:layout_below="@id/toolbar_member_detail_shimmer"
         android:layout_marginTop="0dp"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="45dp"
         android:background="@color/darker_gray"
         android:contentDescription="@string/img_member_detail" />
 

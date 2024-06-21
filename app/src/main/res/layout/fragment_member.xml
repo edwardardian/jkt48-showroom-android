@@ -3,82 +3,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/mainView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp">
-
         <TextView
             android:id="@+id/tv_member"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="14dp"
             android:text="@string/jkt48_member"
             android:textStyle="bold"
             android:textSize="24sp"/>
 
-        <com.facebook.shimmer.ShimmerFrameLayout
-            android:id="@+id/shimmer_frame"
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_member"
+        android:autoStart="true"
+        android:duration="1000">
+
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/tv_member"
-            android:autoStart="true"
-            android:duration="1000">
+            android:layout_marginTop="20dp"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp">
 
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:columnCount="2"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+            <include
+                layout="@layout/item_member_list_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
 
-                <include
-                    layout="@layout/item_member_list_shimmer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"/>
+            <include
+                layout="@layout/item_member_list_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
 
-                <include
-                    layout="@layout/item_member_list_shimmer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"/>
+            <include
+                layout="@layout/item_member_list_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
 
-                <include
-                    layout="@layout/item_member_list_shimmer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"/>
+            <include
+                layout="@layout/item_member_list_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
 
-                <include
-                    layout="@layout/item_member_list_shimmer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"/>
+            <include
+                layout="@layout/item_member_list_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
 
-                <include
-                    layout="@layout/item_member_list_shimmer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"/>
+            <include
+                layout="@layout/item_member_list_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
 
-                <include
-                    layout="@layout/item_member_list_shimmer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"/>
+            <include
+                layout="@layout/item_member_list_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
 
-            </GridLayout>
+            <include
+                layout="@layout/item_member_list_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+        </GridLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
-        </com.facebook.shimmer.ShimmerFrameLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_member"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/shimmer_frame"
-            android:visibility="gone"/>
-
-    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_member"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shimmer_frame"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="2dp"
+        android:visibility="gone"/>
 </RelativeLayout>

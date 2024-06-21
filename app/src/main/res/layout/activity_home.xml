@@ -44,11 +44,11 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavView"
         android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="false"
-        app:itemTextColor="@color/red"
         app:itemIconTint="@color/red"
-        app:menu="@menu/bottom_nav_view_menu"/>
+        app:itemTextColor="@color/red"
+        app:menu="@menu/bottom_nav_view_menu" />
 
 </RelativeLayout>
