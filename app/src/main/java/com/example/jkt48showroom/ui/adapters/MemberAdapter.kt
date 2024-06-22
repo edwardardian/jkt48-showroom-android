@@ -36,21 +36,8 @@ class MemberAdapter(private var imageList: List<String>, private var nameList: L
     }
 
     fun updateData(newImageList: List<String>, newNameList: List<String>) {
-        val oldSize = imageList.size
-        val newSize = newImageList.size
-
         imageList = newImageList
         nameList = newNameList
-
-        if (oldSize == newSize) {
-            notifyItemRangeChanged(0, newSize)
-        } else if (oldSize > newSize) {
-            notifyItemRangeChanged(0, newSize)
-            notifyItemRangeRemoved(newSize, oldSize - newSize)
-        } else {
-            notifyItemRangeChanged(0, oldSize)
-            notifyItemRangeInserted(oldSize, newSize - oldSize)
-        }
     }
 
 

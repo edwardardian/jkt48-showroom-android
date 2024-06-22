@@ -8,6 +8,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
             android:text="@string/jkt48_member"
             android:textStyle="bold"
             android:textSize="24sp"/>
@@ -23,7 +25,7 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:columnCount="2"
             android:orientation="horizontal"
             android:paddingLeft="6dp"

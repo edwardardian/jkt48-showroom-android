@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
+    android:background="@color/white"
     tools:context=".HomeActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_home"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/white"
+        android:background="@color/dark_blue"
         android:theme="@style/Widget.AppCompat.ActionBar"
         android:layout_alignParentTop="true">
 
@@ -20,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/jkt48_showroom"
-            android:textColor="@color/red"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="24sp"/>
 
@@ -28,7 +29,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="end"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/dark_blue"
             android:src="@drawable/login"
             android:contentDescription="@string/login"/>
 
@@ -47,8 +48,9 @@
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/red"
-        app:itemTextColor="@color/red"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:itemBackground="@color/dark_blue"
         app:menu="@menu/bottom_nav_view_menu" />
 
 </RelativeLayout>

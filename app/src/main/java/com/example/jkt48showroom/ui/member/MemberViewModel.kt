@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.jkt48showroom.data.model.Member
 import com.example.jkt48showroom.data.remote.ApiConfig.apiService
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -22,9 +23,11 @@ class MemberViewModel : ViewModel() {
     fun fetchMemberData() {
         viewModelScope.launch {
             try {
-                val memberData: List<Member>? = withContext(Dispatchers.IO) {
-                    val allMember = apiService.getAllMember().execute().body() ?: emptyList()
-                    val allTrainee = apiService.getAllTrainee().execute().body() ?: emptyList()
+                val memberData = withContext(Dispatchers.IO) {
+                    val memberDeferred = async { apiService.getAllMember().execute().body() ?: emptyList() }
+                    val traineeDeferred = async { apiService.getAllTrainee().execute().body() ?: emptyList() }
+                    val allMember = memberDeferred.await()
+                    val allTrainee = traineeDeferred.await()
                     allMember + allTrainee
                 }
                 memberData?.let {
@@ -37,5 +40,6 @@ class MemberViewModel : ViewModel() {
                 e.printStackTrace()
             }
         }
+
     }
 }
